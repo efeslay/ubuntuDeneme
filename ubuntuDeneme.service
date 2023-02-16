@@ -6,8 +6,8 @@ After=network.target
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/ubuntuDeneme
-Environment="PATH=/home/ubuntu/ubuntuDeneme/bin"
-ExecStart=/home/ubuntu/ubuntuDeneme/bin/uwsgi --ini ubuntuDeneme.ini
+Environment="PATH=/home/ubuntu/ubuntuDeneme/venv/bin"
+ExecStart=/home/ubuntu/ubuntuDeneme/venv/bin/uwsgi --ini ubuntuDeneme.ini
 
 [Install]
 WantedBy=multi-user.target
