@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve ubuntuDeneme
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/ubuntuDeneme
+Environment="PATH=/home/ubuntu/ubuntuDeneme/venv/bin"
+ExecStart=/home/ubuntu/ubuntuDeneme/venv/bin/uwsgi --ini ubuntuDeneme.ini
+
+[Install]
+WantedBy=multi-user.target
